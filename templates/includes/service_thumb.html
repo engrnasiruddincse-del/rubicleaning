@@ -1,0 +1,22 @@
+{% comment %}
+  Service image (uploaded, or static/assets/services/<slug>.jpg), else an icon tile.
+  Usage: {% include "includes/service_thumb.html" with service=service classes="w-full h-48" %}
+{% endcomment %}
+{% load i18n_extras %}
+{% with img=service|service_image %}
+{% if img %}
+<img src="{{ img }}" alt="{{ service|loc:'name' }}" class="{{ classes }} object-cover" loading="lazy">
+{% else %}
+<div class="{{ classes }} flex items-center justify-center bg-gradient-to-br {% if 'snow' in service.slug %}from-sky-100 to-blue-200 text-sky-700{% else %}from-blue-50 to-emerald-100 text-blue-600{% endif %}" role="img" aria-label="{{ service|loc:'name' }}">
+  <i class="fa-solid text-5xl
+    {% if 'snow' in service.slug %}fa-snowflake
+    {% elif 'deep' in service.slug %}fa-spray-can-sparkles
+    {% elif 'renovation' in service.slug %}fa-helmet-safety
+    {% elif 'move' in service.slug %}fa-truck-moving
+    {% elif 'window' in service.slug %}fa-table-cells-large
+    {% elif 'sofa' in service.slug %}fa-couch
+    {% elif 'regular' in service.slug %}fa-broom
+    {% else %}fa-soap{% endif %}"></i>
+</div>
+{% endif %}
+{% endwith %}

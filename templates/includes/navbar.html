@@ -1,0 +1,145 @@
+{% load static i18n i18n_extras %}
+
+<!-- 🌐 Header -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-[9999] bg-white/95 backdrop-blur-md border-b border-gray-100 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-6">
+
+    <!-- Wordmark (text only, no logo image) -->
+    <a href="{% url 'home' %}" class="flex flex-col leading-none shrink-0 whitespace-nowrap" aria-label="{{ company.name|default:'Rubi Cleaning' }}">
+      <span class="text-2xl font-extrabold tracking-tight text-gray-900">
+        <span class="text-blue-700">Rubi</span>Cleaning
+      </span>
+      <span class="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-gray-500">{% translate "Home · Office · Snow" %}</span>
+    </a>
+
+    <!-- 🖥️ Desktop menu -->
+    <nav class="hidden lg:flex items-center gap-1 text-[15px] font-medium text-gray-700 whitespace-nowrap">
+      <a href="{% url 'home' %}"
+        class="px-3 py-2 rounded-md hover:text-blue-600 transition {% if request.path == '/' %}text-blue-600 font-semibold{% endif %}">{% translate "Home" %}</a>
+
+      <!-- Services dropdown -->
+      <div class="relative group">
+        <a href="{% url 'services' %}"
+          class="flex items-center gap-1.5 px-3 py-2 rounded-md hover:text-blue-600 transition {% if '/service' in request.path %}text-blue-600 font-semibold{% endif %}">
+          {% translate "Services" %} <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+        </a>
+        {% if services %}
+        <div class="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0
+                    absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[460px] transition-all duration-200">
+          <div class="bg-white rounded-xl shadow-xl ring-1 ring-gray-200 p-2 grid grid-cols-2 gap-1">
+            {% for service in services %}
+            <a href="{% url 'service_detail' service.slug %}"
+              class="px-3 py-2.5 rounded-lg text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">
+              {{ service|loc:"name" }}
+            </a>
+            {% endfor %}
+            <a href="{% url 'services' %}"
+              class="col-span-2 mt-1 px-3 py-2.5 rounded-lg text-sm font-semibold text-blue-600 bg-gray-50 hover:bg-blue-50 text-center transition">
+              {% translate "View all services" %} →
+            </a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <a href="{% url 'about' %}"
+        class="px-3 py-2 rounded-md hover:text-blue-600 transition {% if request.path == '/about/' %}text-blue-600 font-semibold{% endif %}">{% translate "About" %}</a>
+      <a href="{% url 'career' %}"
+        class="px-3 py-2 rounded-md hover:text-blue-600 transition {% if request.path == '/career/' %}text-blue-600 font-semibold{% endif %}">{% translate "Careers" %}</a>
+      <a href="{% url 'contact' %}"
+        class="px-3 py-2 rounded-md hover:text-blue-600 transition {% if request.path == '/contact/' %}text-blue-600 font-semibold{% endif %}">{% translate "Contact" %}</a>
+    </nav>
+
+    <!-- Right side: language, phone, CTA -->
+    <div class="hidden lg:flex items-center gap-4 shrink-0 whitespace-nowrap">
+      {% include "includes/language_switcher.html" %}
+
+      {% if company.phone %}
+      <a href="tel:{{ company.phone|cut:' ' }}" class="hidden xl:flex items-center gap-2 font-semibold text-gray-800 hover:text-blue-600 transition">
+        <i class="fa-solid fa-phone text-blue-600"></i> {{ company.phone }}
+      </a>
+      {% endif %}
+
+      <a href="{% url 'home' %}#quote"
+        class="inline-flex items-center gap-2 px-5 py-2.5 font-semibold text-white rounded-full shadow-md transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 hover:-translate-y-[1px] hover:shadow-lg">
+        <i class="fa-solid fa-paper-plane text-sm"></i> {% translate "Book a Cleaning" %}
+      </a>
+    </div>
+
+    <!-- 📱 Mobile: language + menu button -->
+    <div class="flex lg:hidden items-center gap-3">
+      {% include "includes/language_switcher.html" %}
+      <button id="menu-toggle" aria-label="{% translate 'Menu' %}"
+        class="w-11 h-11 rounded-lg border border-gray-200 text-gray-700 flex items-center justify-center hover:text-blue-600 transition">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- 📱 Mobile menu -->
+<div id="mobile-menu"
+  class="hidden lg:hidden fixed left-0 w-full z-[9990] bg-white border-b border-gray-100 shadow-lg overflow-y-auto transform -translate-y-5 opacity-0 transition-all duration-300 ease-out">
+  <div class="px-4 py-3 space-y-1">
+    <a href="{% url 'home' %}"
+      class="block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 {% if request.path == '/' %}text-blue-700 font-semibold bg-blue-50{% endif %}">{% translate "Home" %}</a>
+    <a href="{% url 'services' %}"
+      class="block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 {% if request.path == '/services/' %}text-blue-700 font-semibold bg-blue-50{% endif %}">{% translate "Services" %}</a>
+    {% for service in services %}
+    <a href="{% url 'service_detail' service.slug %}"
+      class="block py-2 pl-7 pr-3 rounded-lg text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-700">{{ service|loc:"name" }}</a>
+    {% endfor %}
+    <a href="{% url 'about' %}"
+      class="block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 {% if request.path == '/about/' %}text-blue-700 font-semibold bg-blue-50{% endif %}">{% translate "About" %}</a>
+    <a href="{% url 'career' %}"
+      class="block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 {% if request.path == '/career/' %}text-blue-700 font-semibold bg-blue-50{% endif %}">{% translate "Careers" %}</a>
+    <a href="{% url 'contact' %}"
+      class="block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-700 {% if request.path == '/contact/' %}text-blue-700 font-semibold bg-blue-50{% endif %}">{% translate "Contact" %}</a>
+  </div>
+  <div class="px-4 pb-8 pt-2 space-y-3 border-t border-gray-100">
+    {% if company.phone %}
+    <a href="tel:{{ company.phone|cut:' ' }}"
+      class="flex items-center justify-center gap-2 py-3 rounded-full border border-gray-200 font-semibold text-gray-800">
+      <i class="fa-solid fa-phone text-blue-600"></i> {{ company.phone }}
+    </a>
+    {% endif %}
+    <a href="{% url 'home' %}#quote"
+      class="block text-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-3 rounded-full shadow-md">
+      <i class="fa-solid fa-paper-plane mr-2"></i> {% translate "Book a Cleaning" %}
+    </a>
+  </div>
+</div>
+
+<!-- ✅ JS for toggle, animation and scroll shadow -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("navbar");
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    const onScroll = () => header.classList.toggle("shadow-md", window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    const closeMenu = () => {
+      mobileMenu.classList.add("-translate-y-5", "opacity-0");
+      setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+      document.body.classList.remove("overflow-hidden");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      if (mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.remove("hidden");
+        setTimeout(() => {
+          mobileMenu.classList.remove("-translate-y-5", "opacity-0");
+          mobileMenu.classList.add("translate-y-0", "opacity-100");
+        }, 10);
+        document.body.classList.add("overflow-hidden");
+      } else {
+        closeMenu();
+      }
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
+  });
+</script>

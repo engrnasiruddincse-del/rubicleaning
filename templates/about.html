@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static i18n i18n_extras %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+
+<!-- ✅ HERO SECTION -->
+<section class="relative bg-cover bg-center bg-no-repeat py-32 text-white"
+  style="background-image: url('{% if page and page.hero_image %}{{ page.hero_image.url }}{% else %}{% static 'assets/about-hero.jpg' %}{% endif %}');">
+  <div class="absolute inset-0 bg-black/55"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      {% if page and page.title %}{{ page.title }}{% else %}{% translate "About Rubi Cleaning" %}{% endif %}
+    </h1>
+    <p class="text-lg text-white/90 max-w-2xl mx-auto">
+      {% if page and page.subtitle %}{{ page.subtitle }}{% else %}{% translate "Professional home, office and snow cleaning in Tallinn, done with care." %}{% endif %}
+    </p>
+  </div>
+</section>
+
+<!-- ✅ MAIN ABOUT CONTENT -->
+<section class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 text-gray-700 leading-relaxed" data-aos="fade-up">
+    {% if page and page.content %}
+      {{ page.content|safe }}
+    {% else %}
+      <div class="space-y-10">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">{% translate "About Rubi Cleaning" %}</h2>
+        <p>
+          {% translate "Rubi Cleaning is a professional cleaning company in Tallinn for homes, apartments and offices. Our trained team brings the equipment and products, follows a clear checklist on every visit, and leaves your space fresh, healthy and ready to enjoy." %}
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-10 mb-3">{% translate "What we do" %}</h3>
+        <p>{% translate "We specialise in:" %}</p>
+        <ul class="list-disc list-inside space-y-1 ml-4">
+          {% for service in services %}
+          <li>{{ service|loc:"name" }}</li>
+          {% endfor %}
+        </ul>
+
+        <p>
+          {% translate "Whether you need a weekly clean, a one-off deep clean before guests arrive, or a cleared driveway after a snowfall, we tailor every job to your space and schedule." %}
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-10 mb-3">{% translate "Our Promise" %}</h3>
+        <p>
+          {% translate "Our goal is simple: careful work, honest prices and customers who are happy to book us again. If something isn’t right after a clean, tell us and we’ll come back to fix it." %}
+        </p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-10 mb-3">{% translate "Why Choose Us" %}</h3>
+        <ul class="list-disc list-inside space-y-1 ml-4">
+          <li>{% translate "Trained, vetted cleaners who treat your home with respect." %}</li>
+          <li>{% translate "Eco-friendly products that are safe for children and pets." %}</li>
+          <li>{% translate "Flexible booking, including evenings and weekends." %}</li>
+          <li>{% translate "Clear, upfront prices in euros with no hidden extras." %}</li>
+        </ul>
+
+        {% if company.address %}
+        <p class="mt-6">
+          <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>{{ company.address }}
+        </p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ✅ VALUE CARDS -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-award text-4xl text-blue-600 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2 text-gray-900">{% translate "Quality Assurance" %}</h3>
+        <p class="text-gray-600">{% translate "Every job is done to a clear checklist and checked before we leave." %}</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-leaf text-4xl text-green-600 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2 text-gray-900">{% translate "Eco-Friendly" %}</h3>
+        <p class="text-gray-600">{% translate "We use environmentally safe products and sustainable practices in all our services." %}</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-clock text-4xl text-purple-600 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2 text-gray-900">{% translate "Reliable Service" %}</h3>
+        <p class="text-gray-600">{% translate "Punctual, consistent and dependable service you can count on every time." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CTA SECTION -->
+<section class="py-16 bg-gradient-to-r from-blue-900 via-emerald-800 to-emerald-700 text-white text-center">
+  <div class="relative z-10 max-w-4xl mx-auto px-6">
+    <h3 class="text-2xl md:text-3xl font-semibold mb-4">{% translate "Want to know more?" %}</h3>
+    <p class="text-white/90 mb-6 leading-relaxed">{% translate "Contact our friendly team today to learn how we can help keep your space spotless." %}</p>
+    <a href="{% url 'contact' %}"
+      class="inline-block bg-white text-emerald-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300">
+      {% translate "Get in Touch" %}
+    </a>
+  </div>
+</section>
+
+{% include "includes/footer.html" %}
+{% endblock %}

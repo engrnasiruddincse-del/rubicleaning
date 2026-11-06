@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block content %}
+{% include "includes/navbar.html" %}
+
+<!-- ✅ privacy-hero.jpg SECTION -->
+<section class="relative h-[50vh] flex items-center justify-center text-center text-white overflow-hidden">
+  <img
+    src="{% if page and page.hero_image %}{{ page.hero_image.url }}{% else %}{% static 'assets/privacy-hero.jpg' %}{% endif %}"
+    alt="" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      {% if page and page.title %}{{ page.title }}{% else %}{% translate "Privacy Policy" %}{% endif %}
+    </h1>
+    <p class="text-lg text-gray-100 max-w-2xl mx-auto">
+      {% if page and page.subtitle %}{{ page.subtitle }}{% else %}{% translate "We value your privacy and protect your personal data in line with the GDPR." %}{% endif %}
+    </p>
+  </div>
+</section>
+
+<!-- ✅ CONTENT SECTION -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    {% if page and page.content %}
+      {{ page.content|safe }}
+    {% else %}
+      <div class="space-y-10">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">1. {% translate "Information We Collect" %}</h2>
+          <p class="text-gray-700 leading-relaxed">
+            {% translate "We collect your contact details (name, phone number, email and address) only to prepare quotes, schedule cleanings and communicate with you." %}
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">2. {% translate "How We Use Information" %}</h2>
+          <p class="text-gray-700 leading-relaxed">
+            {% translate "Your personal data is used only for booking management, quotes, invoices and updates about our services. We do not sell, rent or share your data with third parties for marketing." %}
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">3. {% translate "Your Rights" %}</h2>
+          <p class="text-gray-700 leading-relaxed">
+            {% translate "Under the EU General Data Protection Regulation (GDPR) you can ask to see, correct or delete your personal data at any time. You may also lodge a complaint with the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon)." %}
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">4. {% translate "Data Security" %}</h2>
+          <p class="text-gray-700 leading-relaxed">
+            {% translate "Your data is stored securely and protected against unauthorised access, with access limited to staff who need it." %}
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">5. {% translate "Cookies" %}</h2>
+          <p class="text-gray-700 leading-relaxed">
+            {% translate "Our website uses only essential cookies, for example to remember your language choice and keep forms secure." %}
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">6. {% translate "Contact Us" %}</h2>
+          <p class="text-gray-700 leading-relaxed">
+            {% translate "Questions about your data? Reach us via our" %}
+            <a href="{% url 'contact' %}" class="text-blue-600 underline">{% translate "contact page" %}</a>{% if company.email %} ·
+            <a href="mailto:{{ company.email }}" class="text-blue-600 underline">{{ company.email }}</a>{% endif %}{% if company.phone %} ·
+            <a href="tel:{{ company.phone|cut:' ' }}" class="text-blue-600 underline">{{ company.phone }}</a>{% endif %}
+          </p>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% include "includes/footer.html" %}
+{% endblock %}

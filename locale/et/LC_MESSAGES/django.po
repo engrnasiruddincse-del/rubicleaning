@@ -1,0 +1,541 @@
+# Estonian translations for Rubi Cleaning.
+# Edit msgstr values, then run: python manage.py build_translations
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "About Rubi Cleaning"
+msgstr "Rubi Cleaningist"
+
+msgid "Professional home, office and snow cleaning in Tallinn, done with care."
+msgstr "Professionaalne kodu-, kontori- ja lumekoristus Tallinnas – hoole ja täpsusega."
+
+msgid "Rubi Cleaning is a professional cleaning company in Tallinn for homes, apartments and offices. Our trained team brings the equipment and products, follows a clear checklist on every visit, and leaves your space fresh, healthy and ready to enjoy."
+msgstr "Rubi Cleaning on professionaalne koristusettevõte Tallinnas, mis teenindab kodusid, kortereid ja kontoreid. Meie koolitatud meeskond toob kaasa vahendid ja seadmed, järgib igal külastusel selget kontrollnimekirja ning jätab teie ruumid värskeks, tervislikuks ja nautimiseks valmis."
+
+msgid "What we do"
+msgstr "Mida me teeme"
+
+msgid "We specialise in:"
+msgstr "Oleme spetsialiseerunud:"
+
+msgid "Whether you need a weekly clean, a one-off deep clean before guests arrive, or a cleared driveway after a snowfall, we tailor every job to your space and schedule."
+msgstr "Olgu vaja iganädalast koristust, ühekordset suurpuhastust enne külaliste saabumist või lumest puhastatud sissesõiduteed – kohandame iga töö teie ruumide ja ajakavaga."
+
+msgid "Our Promise"
+msgstr "Meie lubadus"
+
+msgid "Our goal is simple: careful work, honest prices and customers who are happy to book us again. If something isn’t right after a clean, tell us and we’ll come back to fix it."
+msgstr "Meie eesmärk on lihtne: hoolikas töö, ausad hinnad ja kliendid, kes tellivad meid hea meelega uuesti. Kui pärast koristust on midagi valesti, andke meile teada ja tuleme selle parandama."
+
+msgid "Why Choose Us"
+msgstr "Miks valida meid"
+
+msgid "Trained, vetted cleaners who treat your home with respect."
+msgstr "Koolitatud ja kontrollitud koristajad, kes kohtlevad teie kodu austusega."
+
+msgid "Eco-friendly products that are safe for children and pets."
+msgstr "Keskkonnasõbralikud vahendid, mis on ohutud lastele ja lemmikloomadele."
+
+msgid "Flexible booking, including evenings and weekends."
+msgstr "Paindlik broneerimine, ka õhtuti ja nädalavahetustel."
+
+msgid "Clear, upfront prices in euros with no hidden extras."
+msgstr "Selged hinnad eurodes, ilma varjatud lisatasudeta."
+
+msgid "Quality Assurance"
+msgstr "Kvaliteedi tagamine"
+
+msgid "Every job is done to a clear checklist and checked before we leave."
+msgstr "Iga töö tehakse selge kontrollnimekirja järgi ja kontrollitakse enne lahkumist."
+
+msgid "Eco-Friendly"
+msgstr "Keskkonnasõbralik"
+
+msgid "We use environmentally safe products and sustainable practices in all our services."
+msgstr "Kasutame kõigis teenustes keskkonnaohutuid vahendeid ja jätkusuutlikke töövõtteid."
+
+msgid "Reliable Service"
+msgstr "Usaldusväärne teenus"
+
+msgid "Punctual, consistent and dependable service you can count on every time."
+msgstr "Täpne, ühtlane ja usaldusväärne teenus, millele saate alati loota."
+
+msgid "Want to know more?"
+msgstr "Soovite rohkem teada?"
+
+msgid "Contact our friendly team today to learn how we can help keep your space spotless."
+msgstr "Võtke meie sõbraliku meeskonnaga ühendust ja uurige, kuidas saame teie ruumid säravalt puhtana hoida."
+
+msgid "Get in Touch"
+msgstr "Võta ühendust"
+
+msgid "Hello! I would like to get a quote or ask about your services."
+msgstr "Tere! Sooviksin hinnapakkumist või küsida teie teenuste kohta."
+
+msgid "Chat on WhatsApp"
+msgstr "Kirjuta WhatsAppis"
+
+msgid "Join Our Team"
+msgstr "Liitu meie meeskonnaga"
+
+msgid "Build a rewarding career with Rubi Cleaning in Tallinn."
+msgstr "Loo tasuv karjäär Rubi Cleaningus Tallinnas."
+
+msgid "Current Openings"
+msgstr "Avatud ametikohad"
+
+msgid "Location"
+msgstr "Asukoht"
+
+msgid "Salary"
+msgstr "Palk"
+
+msgid "Apply Now"
+msgstr "Kandideeri"
+
+msgid "No Openings Available"
+msgstr "Avatud ametikohti pole"
+
+msgid "Sorry, no openings available at this time."
+msgstr "Vabandame, hetkel avatud ametikohti ei ole."
+
+msgid "Why Work With Us?"
+msgstr "Miks töötada meiega?"
+
+msgid "Fair Pay"
+msgstr "Õiglane palk"
+
+msgid "Fair, on-time pay and an official employment contract"
+msgstr "Õiglane ja õigeaegne palk ning ametlik tööleping"
+
+msgid "Team Environment"
+msgstr "Meeskonnatöö"
+
+msgid "Supportive team culture with opportunities for growth"
+msgstr "Toetav meeskonnakultuur ja arenguvõimalused"
+
+msgid "Training Provided"
+msgstr "Väljaõpe"
+
+msgid "Hands-on training and skill development"
+msgstr "Praktiline väljaõpe ja oskuste arendamine"
+
+msgid "Apply for Position"
+msgstr "Kandideeri ametikohale"
+
+msgid "Full Name"
+msgstr "Täisnimi"
+
+msgid "Email Address"
+msgstr "E-posti aadress"
+
+msgid "Phone Number"
+msgstr "Telefoninumber"
+
+msgid "CV (PDF, DOC, DOCX)"
+msgstr "CV (PDF, DOC, DOCX)"
+
+msgid "Cover Letter / Message"
+msgstr "Motivatsioonikiri / sõnum"
+
+msgid "Cancel"
+msgstr "Tühista"
+
+msgid "Submit"
+msgstr "Saada"
+
+msgid "Application Submitted!"
+msgstr "Avaldus saadetud!"
+
+msgid "Thank you for applying. We’ll get back to you soon."
+msgstr "Täname kandideerimast. Võtame teiega peagi ühendust."
+
+msgid "Close"
+msgstr "Sulge"
+
+msgid "Error submitting application. Please try again."
+msgstr "Avalduse saatmisel tekkis viga. Palun proovige uuesti."
+
+msgid "Contact Us"
+msgstr "Kontakt"
+
+msgid "Call, WhatsApp or send us a message — we’ll get back to you quickly."
+msgstr "Helistage, kirjutage WhatsAppis või saatke sõnum – vastame kiiresti."
+
+msgid "Have a question or need a quote? Our team is here to help."
+msgstr "Kas teil on küsimus või vajate hinnapakkumist? Meie meeskond aitab hea meelega."
+
+msgid "Send us a Message"
+msgstr "Saada meile sõnum"
+
+msgid "Send Message"
+msgstr "Saada sõnum"
+
+msgid "Office Address"
+msgstr "Kontori aadress"
+
+msgid "Phone & WhatsApp"
+msgstr "Telefon ja WhatsApp"
+
+msgid "Email"
+msgstr "E-post"
+
+msgid "We’re Available"
+msgstr "Oleme saadaval"
+
+msgid "7 days a week, including evenings and weekends by arrangement."
+msgstr "7 päeva nädalas, kokkuleppel ka õhtuti ja nädalavahetustel."
+
+msgid "Map"
+msgstr "Kaart"
+
+msgid "Follow Us"
+msgstr "Jälgi meid"
+
+msgid "Professional home, office and snow cleaning in Tallinn and Harju County."
+msgstr "Professionaalne kodu-, kontori- ja lumekoristus Tallinnas ja Harjumaal."
+
+msgid "Quick Links"
+msgstr "Kiirlingid"
+
+msgid "Home"
+msgstr "Avaleht"
+
+msgid "Services"
+msgstr "Teenused"
+
+msgid "About"
+msgstr "Meist"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Careers"
+msgstr "Karjäär"
+
+msgid "Privacy Policy"
+msgstr "Privaatsuspoliitika"
+
+msgid "Terms & Conditions"
+msgstr "Tingimused"
+
+msgid "No active services"
+msgstr "Aktiivseid teenuseid pole"
+
+msgid "Contact Info"
+msgstr "Kontaktandmed"
+
+msgid "All rights reserved."
+msgstr "Kõik õigused kaitstud."
+
+msgid "Home · Office · Snow"
+msgstr "Kodu · Kontor · Lumi"
+
+msgid "View all services"
+msgstr "Vaata kõiki teenuseid"
+
+msgid "Book a Cleaning"
+msgstr "Broneeri koristus"
+
+msgid "Menu"
+msgstr "Menüü"
+
+msgid "Professional cleaning in Tallinn"
+msgstr "Professionaalne koristus Tallinnas"
+
+msgid "Spotless. Stress-Free."
+msgstr "Puhas. Muretu."
+
+msgid "Guaranteed."
+msgstr "Garanteeritud."
+
+msgid "Home, office and snow cleaning from €35. Book by phone, WhatsApp or the quote form below."
+msgstr "Kodu-, kontori- ja lumekoristus alates 35 €. Broneerige telefoni, WhatsAppi või allpool oleva vormi kaudu."
+
+msgid "Insured"
+msgstr "Kindlustatud"
+
+msgid "Flexible scheduling, 7 days a week"
+msgstr "Paindlik ajakava, 7 päeva nädalas"
+
+msgid "Trained, vetted cleaners"
+msgstr "Koolitatud ja kontrollitud koristajad"
+
+msgid "Eco-friendly products"
+msgstr "Keskkonnasõbralikud vahendid"
+
+msgid "Satisfaction guaranteed"
+msgstr "Rahulolu garanteeritud"
+
+msgid "Get a Free Quote"
+msgstr "Küsi tasuta hinnapakkumist"
+
+msgid "View Our Services"
+msgstr "Vaata teenuseid"
+
+msgid "Get Your Free Quote"
+msgstr "Küsi tasuta hinnapakkumist"
+
+msgid "Fill out the form below and our team will get back to you as soon as possible."
+msgstr "Täitke allolev vorm ja meie meeskond võtab teiega esimesel võimalusel ühendust."
+
+msgid "Enter your full name"
+msgstr "Sisestage oma täisnimi"
+
+msgid "Enter your email"
+msgstr "Sisestage oma e-post"
+
+msgid "Service Address"
+msgstr "Teenuse aadress"
+
+msgid "Street and house number"
+msgstr "Tänav ja majanumber"
+
+msgid "City"
+msgstr "Linn"
+
+msgid "Postal Code"
+msgstr "Postiindeks"
+
+msgid "Select Services"
+msgstr "Vali teenused"
+
+msgid "Message"
+msgstr "Sõnum"
+
+msgid "Any specific requirements or questions?"
+msgstr "Kas teil on erisoove või küsimusi?"
+
+msgid "Our Services"
+msgstr "Meie teenused"
+
+msgid "From regular upkeep to deep cleans and snow removal, everything you need to keep your space shining."
+msgstr "Tavakoristusest suurpuhastuse ja lumekoristuseni – kõik, mida vajate, et teie ruumid säraksid."
+
+msgid "View Details"
+msgstr "Vaata lähemalt"
+
+msgid "No services available right now."
+msgstr "Hetkel teenuseid pole."
+
+msgid "Prices"
+msgstr "Hinnad"
+
+msgid "Starting prices in euros. The final price depends on the size and condition of the space."
+msgstr "Alghinnad eurodes. Lõplik hind sõltub pinna suurusest ja seisukorrast."
+
+msgid "from"
+msgstr "alates"
+
+msgid "Contact us for a price."
+msgstr "Hinna saamiseks võtke meiega ühendust."
+
+msgid "Serving Tallinn & Harju County"
+msgstr "Teenindame Tallinnat ja Harjumaad"
+
+msgid "We clean across Tallinn and nearby Harju County."
+msgstr "Koristame kogu Tallinnas ja lähedal Harjumaal."
+
+msgid "Our Achievements"
+msgstr "Meie saavutused"
+
+msgid "Service Guarantee"
+msgstr "Teenuse garantii"
+
+msgid "Experts"
+msgstr "Spetsialisti"
+
+msgid "Properties Cleaned"
+msgstr "Koristatud objekti"
+
+msgid "Most Popular Services"
+msgstr "Populaarseimad teenused"
+
+msgid "Our customers’ favourite cleaning services — tried, trusted and loved."
+msgstr "Meie klientide lemmikteenused – proovitud, usaldatud ja armastatud."
+
+msgid "No popular services available right now."
+msgstr "Hetkel populaarseid teenuseid pole."
+
+msgid "What Our Clients Say"
+msgstr "Mida meie kliendid ütlevad"
+
+msgid "Real feedback from satisfied customers who trust our services."
+msgstr "Päris tagasiside rahulolevatelt klientidelt, kes usaldavad meie teenuseid."
+
+msgid "Frequently Asked Questions"
+msgstr "Korduma kippuvad küsimused"
+
+msgid "Get answers to common questions about our cleaning services."
+msgstr "Vastused levinumatele küsimustele meie koristusteenuste kohta."
+
+msgid "No FAQs available right now."
+msgstr "Hetkel küsimusi pole."
+
+msgid "We value your privacy and protect your personal data in line with the GDPR."
+msgstr "Hindame teie privaatsust ja kaitseme teie isikuandmeid kooskõlas isikuandmete kaitse üldmäärusega (GDPR)."
+
+msgid "Information We Collect"
+msgstr "Milliseid andmeid kogume"
+
+msgid "We collect your contact details (name, phone number, email and address) only to prepare quotes, schedule cleanings and communicate with you."
+msgstr "Kogume teie kontaktandmeid (nimi, telefoninumber, e-post ja aadress) ainult hinnapakkumiste koostamiseks, koristuste planeerimiseks ja teiega suhtlemiseks."
+
+msgid "How We Use Information"
+msgstr "Kuidas andmeid kasutame"
+
+msgid "Your personal data is used only for booking management, quotes, invoices and updates about our services. We do not sell, rent or share your data with third parties for marketing."
+msgstr "Teie isikuandmeid kasutatakse ainult broneeringute haldamiseks, hinnapakkumiste, arvete ja teenustega seotud teavituste jaoks. Me ei müü, rendi ega jaga teie andmeid kolmandatele osapooltele turunduse eesmärgil."
+
+msgid "Your Rights"
+msgstr "Teie õigused"
+
+msgid "Under the EU General Data Protection Regulation (GDPR) you can ask to see, correct or delete your personal data at any time. You may also lodge a complaint with the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon)."
+msgstr "Isikuandmete kaitse üldmääruse (GDPR) alusel võite igal ajal taotleda oma isikuandmetega tutvumist, nende parandamist või kustutamist. Samuti võite esitada kaebuse Andmekaitse Inspektsioonile."
+
+msgid "Data Security"
+msgstr "Andmete turvalisus"
+
+msgid "Your data is stored securely and protected against unauthorised access, with access limited to staff who need it."
+msgstr "Teie andmeid hoitakse turvaliselt ja kaitstakse volitamata juurdepääsu eest; ligipääs on ainult töötajatel, kes seda vajavad."
+
+msgid "Cookies"
+msgstr "Küpsised"
+
+msgid "Our website uses only essential cookies, for example to remember your language choice and keep forms secure."
+msgstr "Meie veebileht kasutab ainult hädavajalikke küpsiseid, näiteks keelevaliku meelespidamiseks ja vormide turvalisuse tagamiseks."
+
+msgid "Questions about your data? Reach us via our"
+msgstr "Küsimusi oma andmete kohta? Võtke meiega ühendust:"
+
+msgid "contact page"
+msgstr "kontaktileht"
+
+msgid "Spotless, reliable and eco-friendly — for homes and businesses in Tallinn."
+msgstr "Puhas, usaldusväärne ja keskkonnasõbralik – kodudele ja ettevõtetele Tallinnas."
+
+msgid "Fully insured, trained and vetted cleaners"
+msgstr "Kindlustatud, koolitatud ja kontrollitud koristajad"
+
+msgid "Eco-friendly and safe cleaning products"
+msgstr "Keskkonnasõbralikud ja ohutud puhastusvahendid"
+
+msgid "Satisfaction guaranteed on every job"
+msgstr "Rahulolu garantii iga töö puhul"
+
+msgid "Book on WhatsApp"
+msgstr "Broneeri WhatsAppis"
+
+msgid "Back to Services"
+msgstr "Tagasi teenuste juurde"
+
+msgid "Why Choose Rubi Cleaning?"
+msgstr "Miks valida Rubi Cleaning?"
+
+msgid "We combine reliability, experience and eco-conscious care to deliver spotless results every time."
+msgstr "Ühendame usaldusväärsuse, kogemuse ja keskkonnateadlikkuse, et tulemus oleks alati laitmatu."
+
+msgid "Contact Us Today"
+msgstr "Võta meiega ühendust"
+
+msgid "Explore our professional cleaning services — designed to make your space spotless and stress-free."
+msgstr "Tutvuge meie professionaalsete koristusteenustega – et teie ruumid oleksid puhtad ja mure oleks väiksem."
+
+msgid "What We Offer"
+msgstr "Mida pakume"
+
+msgid "From one-time deep cleans to ongoing maintenance, our expert team has you covered."
+msgstr "Ühekordsest suurpuhastusest püsiva hoolduseni – meie meeskond aitab."
+
+msgid "Looking for a Custom Service?"
+msgstr "Otsite eriteenust?"
+
+msgid "We offer tailored cleaning for your home or business. Get in touch today and let’s make your space shine."
+msgstr "Pakume teie kodule või ettevõttele kohandatud koristust. Võtke ühendust ja paneme teie ruumid särama."
+
+msgid "Please read our terms before booking our cleaning services."
+msgstr "Palun lugege meie tingimused enne koristusteenuse broneerimist läbi."
+
+msgid "Agreement"
+msgstr "Kokkulepe"
+
+msgid "By booking Rubi Cleaning services, you agree to these terms. All bookings are subject to availability and confirmation."
+msgstr "Rubi Cleaningu teenuseid broneerides nõustute nende tingimustega. Kõik broneeringud sõltuvad vabadest aegadest ja vajavad kinnitust."
+
+msgid "Prices and Payment"
+msgstr "Hinnad ja maksmine"
+
+msgid "Prices are in euros (EUR). Prices on the website are starting prices; the final price is confirmed before the work begins. Invoices are paid by bank transfer within the stated due date."
+msgstr "Hinnad on eurodes (EUR). Veebilehel toodud hinnad on alghinnad; lõplik hind lepitakse kokku enne töö algust. Arved tasutakse pangaülekandega märgitud maksetähtajaks."
+
+msgid "Cancellations"
+msgstr "Tühistamine"
+
+msgid "You may cancel free of charge up to 24 hours before your appointment. Late cancellations may incur a fee to cover staff and scheduling costs."
+msgstr "Broneeringu saab tasuta tühistada kuni 24 tundi enne kokkulepitud aega. Hilisema tühistamise korral võib rakenduda tasu töötajate ja planeerimise kulude katmiseks."
+
+msgid "Quality Guarantee"
+msgstr "Kvaliteedigarantii"
+
+msgid "If you are not satisfied with any part of the cleaning, let us know within 24 hours and we will return to fix it free of charge."
+msgstr "Kui te pole mõne koristuse osaga rahul, andke meile teada 24 tunni jooksul ja tuleme selle tasuta parandama."
+
+msgid "Liability"
+msgstr "Vastutus"
+
+msgid "We are insured for the work we carry out. Rubi Cleaning is not liable for pre-existing damage or normal wear and tear."
+msgstr "Meie tehtud töö on kindlustatud. Rubi Cleaning ei vastuta varasemate kahjustuste ega tavapärase kulumise eest."
+
+msgid "For further information, reach us via our"
+msgstr "Lisateabe saamiseks võtke meiega ühendust:"
+
+msgid "Your quote request has been submitted successfully!"
+msgstr "Teie hinnapäring on edukalt saadetud!"
+
+msgid "Please check the form and try again."
+msgstr "Palun kontrollige vormi ja proovige uuesti."
+
+msgid "Your message has been sent successfully!"
+msgstr "Teie sõnum on edukalt saadetud!"
+
+msgid "Your application has been submitted successfully!"
+msgstr "Teie avaldus on edukalt saadetud!"
+
+msgid "First name"
+msgstr "Eesnimi"
+
+msgid "Last name"
+msgstr "Perekonnanimi"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Subject"
+msgstr "Teema"
+
+msgid "Enter your first name"
+msgstr "Sisestage oma eesnimi"
+
+msgid "Enter your last name"
+msgstr "Sisestage oma perekonnanimi"
+
+msgid "Enter subject"
+msgstr "Sisestage teema"
+
+msgid "Enter your message"
+msgstr "Sisestage oma sõnum"
+
+msgid "Hello! I would like to book: %(service)s (from %(price)s)."
+msgstr "Tere! Soovin broneerida: %(service)s (alates %(price)s)."
+
+msgid "Hello! I would like to book: %(service)s."
+msgstr "Tere! Soovin broneerida: %(service)s."
+
+msgid "Address:"
+msgstr "Aadress:"
+
+msgid "Preferred date and time:"
+msgstr "Soovitud kuupäev ja kellaaeg:"

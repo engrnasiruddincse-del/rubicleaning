@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quote {{ quote.quete_id }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      margin: 40px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .company-info {
+      width: 55%;
+    }
+
+    .quote-info {
+      width: 40%;
+      text-align: right;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #f5f5f5;
+    }
+
+    .totals {
+      margin-top: 20px;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div style="font-size: 26px; font-weight: 800; color: #111827;"><span style="color: #1d4ed8;">Rubi</span>Cleaning</div>
+    
+  <div class="header">
+    <div class="company-info">
+      <h3><strong>{{ quote.company.name }}</strong></h3>
+      {% if quote.company.reg_no %}<p>Reg. code: {{ quote.company.reg_no }}</p>{% endif %}
+      {% if quote.company.abn %}<p>VAT no. (KMKR): {{ quote.company.abn }}</p>{% endif %}
+      <p>Address: {{ quote.company.address }}</p>
+      <p>Mobile / WhatsApp: {{ quote.company.phone }}</p>
+      {% if quote.company.email %}<p>Email: <a href="mailto:{{ quote.company.email }}">{{ quote.company.email }}</a></p>{% endif %}
+      {% if quote.company.website %}<p>Website: <a href="{{ quote.company.website }}" target="_blank">{{ quote.company.website }}</a></p>{% endif %}
+    </div>
+    <div class="quote-info">
+      <h2>QUOTE</h2>
+      <p><b>Date:</b> {{ quote.created_at|date:"d M Y" }}</p>
+      <p>Expiry: {{ quote.expiry_date|date:"d M Y"|default:"N/A" }}</p>
+      <p><b>Reference:</b> {{ quote.reference|default:"N/A" }}</p>
+      <p>Address: {{ quote.address|default:"" }} {{ quote.postal_code|default:"" }} <br> {{ quote.city|default:"" }}</p>
+      <p><b>Quote Number: </b>{{ quote.quote_id }}</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Description</th>
+        <th>Qty</th>
+        <th>Unit Price (€)</th>
+        <th>Amount (€)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in quote.items.all %}
+      <tr>
+        <td>{{ forloop.counter|stringformat:"02d" }}</td>
+        <td>{{ item.service.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.rate }}</td>
+        <td>{{ item.amount }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" style="text-align: right;">VAT {{ quote.vat_percent }}%:</td>
+        <td>€{{ quote.gst_amount|floatformat:2 }}</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: right;"><strong>Total Amount (EUR):</strong></td>
+        <td><strong>€{{ quote.total_with_gst|floatformat:2 }}</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <br>
+  <b>Notes:</b>
+  <p>Our policy is to guarantee our services to meet the standards required by our customer. Should
+you have any further queries regarding the above matter, please do not hesitate to contact us. We
+look forward to a favorable reply.</p>
+
+<b>Terms: </b>
+<ol>
+  <li>Payment can be made via Bank Transfer.</li>
+  <li>Late payment fees may apply after the due date.</li>
+  <li>Additional charges may apply for special requests.</li>
+</ol>
+
+
+<h5 style="text-align: center;">Thank you.</h5>
+</body>
+
+</html>

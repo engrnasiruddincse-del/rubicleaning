@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: 255 255 255;
+  --foreground: 2 8 23;
+  --primary: 37 99 235; /* Blue */
+  --primary-foreground: 255 255 255;
+  --muted: 148 163 184;
+  --muted-foreground: 100 116 139;
+  --header-total: 96px; /* 32px topbar + 64px navbar */
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  scroll-behavior: smooth;
+}
+
+/* Glass effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  color: rgb(2 8 23);
+}
+
+.glass-card {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  color: rgb(2 8 23);
+}
+
+.price-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  color: rgb(2 8 23);
+}
+
+/* Gradients */
+.section-gradient {
+  background: linear-gradient(135deg, #fafafa 0%, #f0f9ff 100%);
+}
+
+.accent-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+.counter-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.6s ease-in-out; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slideIn { animation: slideIn 0.8s ease-out; }
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.counter-animate { animation: countUp 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* Hover effects */
+.hover-scale {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.hover-scale:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.image-zoom {
+  transition: transform 0.6s ease;
+}
+.image-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* WhatsApp Button Float Animation */
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-pulse {
+  animation: floatPulse 2.5s ease-in-out infinite;
+}
+
+/* Focus styles */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+/* ✅ Header (layout lives in templates/includes/navbar.html) */
+#navbar {
+  display: block;
+  margin: 0 !important;
+  z-index: 9999;
+}
+
+/* ✅ Remove any white gap under header */
+main.page-content {
+  padding-top: var(--header-total);
+}
+
+/* Mobile Menu */
+#mobile-menu {
+  position: fixed !important;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9998;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Prevent background scroll when menu open */
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Toast container fix */
+#toast-container {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* WhatsApp button positioning fix */
+@media (max-width: 768px) {
+  .whatsapp-btn,
+  .animate-pulse {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 12px 16px;
+  }
+  .whatsapp-btn span {
+    display: none;
+  }
+}
+
+
+/* Small mobile fix (iPhone SE etc.) */
+@media (max-width: 380px) {
+  #topbar p {
+    font-size: 12px;
+  }
+}
+
+/* Toast positioning for mobile */
+@media (max-width: 640px) {
+  #toast-container {
+    top: 90px;
+  }
+  .counter {
+    font-size: 2.25rem !important;
+  }
+}
+
+/* Zoom fix for about page / general responsiveness */
+@media (max-width: 1024px) {
+  html, body {
+    zoom: 100% !important;
+  }
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form Focus */
+input:focus, textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Buttons */
+button, a {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover, a:hover {
+  opacity: 0.9;
+}
+
+/* Service description (HTML from admin) */
+.service-description p { margin-bottom: 1rem; }
+.service-description ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+.service-description li { margin-bottom: 0.35rem; }
+
+/* Contact form (rendered with form.as_p) */
+.contact-form label { display: block; font-weight: 600; font-size: 0.875rem; color: #374151; margin-bottom: 0.4rem; }
+.contact-form p { margin-bottom: 1rem; }
+.contact-form input, .contact-form textarea { width: 100%; border: 1px solid #d1d5db; }

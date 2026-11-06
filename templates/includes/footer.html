@@ -1,0 +1,106 @@
+{% load static i18n i18n_extras %}
+
+<footer class="bg-gray-900 text-gray-300 py-12 mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- ✅ Company Info -->
+    <div>
+      <div class="mb-4 text-center sm:text-left">
+        <a href="{% url 'home' %}" class="text-2xl font-extrabold tracking-tight text-white">
+          <span class="text-blue-400">Rubi</span>Cleaning
+        </a>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-4 text-center sm:text-left">
+        {% translate "Professional home, office and snow cleaning in Tallinn and Harju County." %}
+      </p>
+
+      <!-- ✅ Dynamic Social Links -->
+      <div class="flex flex-wrap justify-center sm:justify-start gap-4 text-gray-400 text-lg mt-4 sm:mt-3">
+        {% if company.facebook %}
+        <a href="{{ company.facebook }}" target="_blank" aria-label="Facebook"
+          class="p-2 bg-gray-800/60 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        {% endif %}
+        {% if company.twitter %}
+        <a href="{{ company.twitter }}" target="_blank" aria-label="Twitter"
+          class="p-2 bg-gray-800/60 rounded-full hover:bg-sky-400 hover:text-white transition-all duration-300 transform hover:scale-110">
+          <i class="fab fa-twitter"></i>
+        </a>
+        {% endif %}
+        {% if company.instagram %}
+        <a href="{{ company.instagram }}" target="_blank" aria-label="Instagram"
+          class="p-2 bg-gray-800/60 rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110">
+          <i class="fab fa-instagram"></i>
+        </a>
+        {% endif %}
+        {% if company.linkedin %}
+        <a href="{{ company.linkedin }}" target="_blank" aria-label="LinkedIn"
+          class="p-2 bg-gray-800/60 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        {% endif %}
+        {% if company.youtube %}
+        <a href="{{ company.youtube }}" target="_blank" aria-label="YouTube"
+          class="p-2 bg-gray-800/60 rounded-full hover:bg-red-600 hover:text-white transition-all duration-300 transform hover:scale-110">
+          <i class="fab fa-youtube"></i>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- ✅ Quick Links -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">{% translate "Quick Links" %}</h4>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="{% url 'home' %}" class="hover:text-blue-500">{% translate "Home" %}</a></li>
+        <li><a href="{% url 'services' %}" class="hover:text-blue-500">{% translate "Services" %}</a></li>
+        <li><a href="{% url 'about' %}" class="hover:text-blue-500">{% translate "About" %}</a></li>
+        <li><a href="{% url 'contact' %}" class="hover:text-blue-500">{% translate "Contact" %}</a></li>
+        <li><a href="{% url 'career' %}" class="hover:text-blue-500">{% translate "Careers" %}</a></li>
+        <li><a href="{% url 'privacy_policy' %}" class="hover:text-blue-500">{% translate "Privacy Policy" %}</a></li>
+        <li><a href="{% url 'terms_conditions' %}" class="hover:text-blue-500">{% translate "Terms & Conditions" %}</a></li>
+      </ul>
+    </div>
+
+    <!-- ✅ Services List -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">{% translate "Services" %}</h4>
+      <ul class="space-y-2 text-gray-400">
+        {% for service in services %}
+        <li>
+          <a href="{% url 'service_detail' service.slug %}" class="hover:text-blue-500">
+            {{ service|loc:"name" }}
+          </a>
+        </li>
+        {% empty %}
+        <li>{% translate "No active services" %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- ✅ Contact Info -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">{% translate "Contact Info" %}</h4>
+      <ul class="space-y-3 text-gray-400 text-sm">
+        {% if company.address %}
+        <li class="flex"><i class="fas fa-map-marker-alt mr-2 mt-1 text-blue-500"></i>{{ company.address }}</li>
+        {% endif %}
+        {% if company.phone %}
+        <li><i class="fas fa-phone mr-2 text-blue-500"></i><a href="tel:{{ company.phone|cut:' ' }}" class="hover:text-white">{{ company.phone }}</a></li>
+        <li><i class="fab fa-whatsapp mr-2 text-blue-500"></i><a href="https://wa.me/{{ company.phone|cut:' '|cut:'+' }}" target="_blank" rel="noopener" class="hover:text-white">WhatsApp</a></li>
+        {% endif %}
+        {% if company.email %}
+        <li><i class="fas fa-envelope mr-2 text-blue-500"></i><a href="mailto:{{ company.email }}" class="hover:text-white">{{ company.email }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ✅ Footer Bottom -->
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+    <p>© {% now "Y" %} {{ company.name|default:"Rubi Cleaning" }}. {% translate "All rights reserved." %}</p>
+  </div>
+</footer>
