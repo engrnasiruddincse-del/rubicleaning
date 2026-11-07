@@ -5,11 +5,8 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-6">
 
     <!-- Wordmark (text only, no logo image) -->
-    <a href="{% url 'home' %}" class="flex flex-col leading-none shrink-0 whitespace-nowrap" aria-label="{{ company.name|default:'Rubi Cleaning' }}">
-      <span class="text-2xl font-extrabold tracking-tight text-gray-900">
-        <span class="text-blue-700">Rubi</span>Cleaning
-      </span>
-      <span class="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-gray-500">{% translate "Home · Office · Snow" %}</span>
+    <a href="{% url 'home' %}" class="shrink-0" aria-label="{{ company.name|default:'Rubi Cleaning' }}">
+      {% include "includes/logo.html" %}
     </a>
 
     <!-- 🖥️ Desktop menu -->

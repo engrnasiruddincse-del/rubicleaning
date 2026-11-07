@@ -78,6 +78,15 @@ msgstr "Tere! Sooviksin hinnapakkumist või küsida teie teenuste kohta."
 msgid "Chat on WhatsApp"
 msgstr "Kirjuta WhatsAppis"
 
+msgid "Quick contact"
+msgstr "Kiire kontakt"
+
+msgid "Call"
+msgstr "Helista"
+
+msgid "Get a Quote"
+msgstr "Küsi pakkumist"
+
 msgid "Join Our Team"
 msgstr "Liitu meie meeskonnaga"
 
@@ -231,9 +240,6 @@ msgstr "Kontaktandmed"
 msgid "All rights reserved."
 msgstr "Kõik õigused kaitstud."
 
-msgid "Home · Office · Snow"
-msgstr "Kodu · Kontor · Lumi"
-
 msgid "View all services"
 msgstr "Vaata kõiki teenuseid"
 
@@ -242,6 +248,12 @@ msgstr "Broneeri koristus"
 
 msgid "Menu"
 msgstr "Menüü"
+
+msgid "View Details"
+msgstr "Vaata lähemalt"
+
+msgid "Book"
+msgstr "Broneeri"
 
 msgid "Professional cleaning in Tallinn"
 msgstr "Professionaalne koristus Tallinnas"
@@ -315,11 +327,32 @@ msgstr "Meie teenused"
 msgid "From regular upkeep to deep cleans and snow removal, everything you need to keep your space shining."
 msgstr "Tavakoristusest suurpuhastuse ja lumekoristuseni – kõik, mida vajate, et teie ruumid säraksid."
 
-msgid "View Details"
-msgstr "Vaata lähemalt"
-
 msgid "No services available right now."
 msgstr "Hetkel teenuseid pole."
+
+msgid "How It Works"
+msgstr "Kuidas see käib"
+
+msgid "Booking a cleaning takes just a couple of minutes."
+msgstr "Koristuse broneerimine võtab vaid paar minutit."
+
+msgid "Message or call us"
+msgstr "Kirjutage või helistage"
+
+msgid "Tell us what needs cleaning via WhatsApp, phone or the quote form."
+msgstr "Andke teada, mida on vaja koristada – WhatsAppis, telefoni teel või hinnapäringu vormiga."
+
+msgid "Agree on price and time"
+msgstr "Lepime kokku hinna ja aja"
+
+msgid "We confirm the final price before we start and pick a time that suits you."
+msgstr "Kinnitame lõpliku hinna enne töö algust ja valime teile sobiva aja."
+
+msgid "We clean, you relax"
+msgstr "Meie koristame, teie puhkate"
+
+msgid "Our team arrives with all the products and equipment and leaves your space spotless."
+msgstr "Meie meeskond tuleb kõigi vahendite ja seadmetega ning jätab teie ruumid säravalt puhtaks."
 
 msgid "Prices"
 msgstr "Hinnad"
@@ -332,6 +365,21 @@ msgstr "alates"
 
 msgid "Contact us for a price."
 msgstr "Hinna saamiseks võtke meiega ühendust."
+
+msgid "Our Work"
+msgstr "Meie tööd"
+
+msgid "Real results from our cleanings. Drag the slider to compare before and after."
+msgstr "Päris tulemused meie koristustest. Lohistage liugurit, et võrrelda enne ja pärast."
+
+msgid "After"
+msgstr "Pärast"
+
+msgid "Before"
+msgstr "Enne"
+
+msgid "Compare before and after"
+msgstr "Võrdle enne ja pärast"
 
 msgid "Serving Tallinn & Harju County"
 msgstr "Teenindame Tallinnat ja Harjumaad"

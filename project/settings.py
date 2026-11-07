@@ -20,6 +20,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = os.environ.get('DEBUG', 'False').lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = ['rubicleaning.ee', 'www.rubicleaning.ee', '127.0.0.1', 'localhost']
+# Extra hosts from .env, comma-separated (e.g. the server IP)
+ALLOWED_HOSTS += [h.strip() for h in os.environ.get('EXTRA_ALLOWED_HOSTS', '').split(',') if h.strip()]
 
 
 # Application definition
@@ -181,3 +183,11 @@ CSRF_TRUSTED_ORIGINS = [
     'https://www.rubicleaning.ee',
     'http://localhost:8000',
 ]
+# Extra origins from .env, comma-separated (e.g. http://46.101.228.119:8080)
+CSRF_TRUSTED_ORIGINS += [o.strip() for o in os.environ.get('EXTRA_CSRF_ORIGINS', '').split(',') if o.strip()]
+
+# Behind nginx with HTTPS: set HTTPS=True in .env once the SSL certificate is installed
+if os.environ.get('HTTPS', 'False').lower() in ('true', '1', 'yes'):
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True

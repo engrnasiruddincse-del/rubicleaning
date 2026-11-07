@@ -10,7 +10,7 @@ from django.utils.translation import gettext as _
 
 from .models import (
     Quote, QuoteRequest, Service, Vacancy, Contact, MyCompany,
-    FAQ, ServiceLocation, Pricing, Review, PageContent, HeroSection
+    FAQ, ServiceLocation, Pricing, Review, PageContent, HeroSection, WorkExample
 )
 from .forms import QuoteRequestForm, ApplicationForm, ContactForm
 
@@ -153,6 +153,7 @@ def home(request):
     locations = ServiceLocation.objects.filter(is_active=True)
     popular_services = Service.objects.filter(is_popular=True)
     faqs = FAQ.objects.filter(is_general=True)
+    work_examples = WorkExample.objects.filter(is_active=True)[:6]
 
     return render(request, "index.html", {
         "hero": hero,
@@ -163,6 +164,7 @@ def home(request):
         "locations": locations,
         "popular_services": popular_services,
         "faqs": faqs,
+        "work_examples": work_examples,
     })
 
 

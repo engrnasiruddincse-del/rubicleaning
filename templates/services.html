@@ -36,10 +36,7 @@
           {{ service|loc:"description"|striptags|truncatewords:40 }}
         </p>
 
-        <a href="{% url 'service_detail' service.slug %}"
-           class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-full font-medium transition-all duration-300">
-          {% translate "View Details" %}
-        </a>
+        {% include "includes/service_buttons.html" with service=service %}
       </div>
       {% empty %}
       <p class="text-center text-gray-500 col-span-full">{% translate "No services available right now." %}</p>

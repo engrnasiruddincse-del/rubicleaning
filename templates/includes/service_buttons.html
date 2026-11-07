@@ -1,0 +1,16 @@
+{% comment %}
+  "View Details" + "Book" (WhatsApp with this service and its starting price pre-filled).
+  Usage: {% include "includes/service_buttons.html" with service=service %}
+{% endcomment %}
+{% load i18n i18n_extras %}
+<div class="flex flex-wrap items-center gap-3">
+  <a href="{% url 'service_detail' service.slug %}"
+    class="inline-flex items-center justify-center border border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-medium px-5 py-2 rounded-full transition duration-300">
+    {% translate "View Details" %}
+  </a>
+  {% whatsapp_book_url company service|loc:"name" service.price_from as wa_url %}
+  <a href="{{ wa_url }}" {% if company.phone %}target="_blank" rel="noopener"{% endif %}
+    class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-5 py-2 rounded-full transition duration-300">
+    {% if company.phone %}<i class="fab fa-whatsapp"></i>{% endif %} {% translate "Book" %}
+  </a>
+</div>

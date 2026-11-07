@@ -214,3 +214,12 @@ button:hover, a:hover {
 .contact-form label { display: block; font-weight: 600; font-size: 0.875rem; color: #374151; margin-bottom: 0.4rem; }
 .contact-form p { margin-bottom: 1rem; }
 .contact-form input, .contact-form textarea { width: 100%; border: 1px solid #d1d5db; }
+
+/* Before / after slider (Our Work) */
+.ba-slider .ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.ba-slider .ba-handle { left: var(--pos); transform: translateX(-50%); }
+
+/* Mobile sticky contact bar: keep page content clear of it */
+@media (max-width: 1023px) {
+  body.has-mobile-bar { padding-bottom: 64px; }
+}

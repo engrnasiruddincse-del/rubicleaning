@@ -90,7 +90,12 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+    @property
+    def price_from(self):
+        """Starting price from the matching Pricing row (same English title), or ''."""
+        return Pricing.objects.filter(is_active=True, title=self.name).values_list('price', flat=True).first() or ''
+
     # def get_absolute_url(self):
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -321,6 +326,25 @@ class ImageGallery(models.Model):
 
     def __str__(self):
         return self.service_name
+
+
+class WorkExample(models.Model):
+    """Before/after photos of a real job, shown in the homepage 'Our Work' section."""
+    title = models.CharField(max_length=255, help_text="e.g. 'Oven tray'")
+    title_et = models.CharField("Title (Estonian)", max_length=255, blank=True)
+    service = models.ForeignKey(Service, on_delete=models.SET_NULL, blank=True, null=True)
+    before_image = models.ImageField(upload_to='serviceapp/work')
+    after_image = models.ImageField(upload_to='serviceapp/work')
+    is_active = models.BooleanField(default=True)
+    order = models.PositiveIntegerField(default=0)
+
+    class Meta:
+        ordering = ["order", "-id"]
+        verbose_name = "Before / After"
+        verbose_name_plural = "Our Work (Before / After)"
+
+    def __str__(self):
+        return self.title
 
 
 class Team(models.Model):

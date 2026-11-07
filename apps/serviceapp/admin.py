@@ -22,6 +22,7 @@ from . models import (
     Quote,
     Review,
     ImageGallery,
+    WorkExample,
     Team,
     Blog,
     MyCompany,
@@ -308,6 +309,14 @@ class HeroSectionAdmin(ModelAdmin):
 class ImageGalleryAdmin(ModelAdmin):
     list_display = ('service_name', 'image')
     search_fields = ('service_name',)
+
+
+@admin.register(WorkExample)
+class WorkExampleAdmin(ModelAdmin):
+    list_display = ('title', 'title_et', 'service', 'is_active', 'order')
+    list_editable = ('is_active', 'order')
+    list_filter = ('is_active', 'service')
+    search_fields = ('title', 'title_et')
 
 
 @admin.register(Team)

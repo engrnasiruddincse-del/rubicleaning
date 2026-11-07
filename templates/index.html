@@ -161,16 +161,49 @@
           <p class="text-gray-600 mb-6 text-sm leading-relaxed line-clamp-4">
             {{ service|loc:"description"|striptags|truncatewords:40 }}
           </p>
-          <a href="{% url 'service_detail' service.slug %}"
-            class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-6 py-2 rounded-full transition duration-300">
-            {% translate "View Details" %}
-          </a>
+          {% include "includes/service_buttons.html" with service=service %}
         </div>
       </div>
       {% empty %}
       <p class="text-gray-500 text-center col-span-3">{% translate "No services available right now." %}</p>
       {% endfor %}
     </div>
+  </div>
+</section>
+
+
+<!-- ================== HOW IT WORKS ================== -->
+<section id="how-it-works" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-bold mb-4 text-gray-900">{% translate "How It Works" %}</h2>
+    <p class="text-gray-600 mb-14 max-w-2xl mx-auto">{% translate "Booking a cleaning takes just a couple of minutes." %}</p>
+
+    <ol class="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+      <li class="relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-blue-500/30">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <span class="absolute top-0 left-1/2 ml-6 -mt-2 w-7 h-7 rounded-full bg-white border-2 border-emerald-500 text-emerald-600 text-sm font-bold flex items-center justify-center">1</span>
+        <h3 class="mt-6 text-xl font-semibold text-gray-900">{% translate "Message or call us" %}</h3>
+        <p class="mt-2 text-gray-600">{% translate "Tell us what needs cleaning via WhatsApp, phone or the quote form." %}</p>
+      </li>
+      <li class="relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-blue-500/30">
+          <i class="fa-regular fa-calendar-check"></i>
+        </div>
+        <span class="absolute top-0 left-1/2 ml-6 -mt-2 w-7 h-7 rounded-full bg-white border-2 border-emerald-500 text-emerald-600 text-sm font-bold flex items-center justify-center">2</span>
+        <h3 class="mt-6 text-xl font-semibold text-gray-900">{% translate "Agree on price and time" %}</h3>
+        <p class="mt-2 text-gray-600">{% translate "We confirm the final price before we start and pick a time that suits you." %}</p>
+      </li>
+      <li class="relative" data-aos="fade-up" data-aos-delay="300">
+        <div class="mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-blue-500/30">
+          <i class="fa-solid fa-broom"></i>
+        </div>
+        <span class="absolute top-0 left-1/2 ml-6 -mt-2 w-7 h-7 rounded-full bg-white border-2 border-emerald-500 text-emerald-600 text-sm font-bold flex items-center justify-center">3</span>
+        <h3 class="mt-6 text-xl font-semibold text-gray-900">{% translate "We clean, you relax" %}</h3>
+        <p class="mt-2 text-gray-600">{% translate "Our team arrives with all the products and equipment and leaves your space spotless." %}</p>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -209,6 +242,53 @@
     </div>
   </div>
 </section>
+
+
+<!-- ================== OUR WORK: BEFORE / AFTER (hidden until photos are added in admin) ================== -->
+{% if work_examples %}
+<section id="our-work" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl font-bold mb-4 text-gray-900">{% translate "Our Work" %}</h2>
+    <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+      {% translate "Real results from our cleanings. Drag the slider to compare before and after." %}
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for work in work_examples %}
+      <figure class="bg-white rounded-2xl shadow-md overflow-hidden text-left" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+        <div class="ba-slider relative aspect-[4/3] select-none overflow-hidden" style="--pos: 50%;">
+          <img src="{{ work.after_image.url }}" alt="{{ work|loc:'title' }} – {% translate 'After' %}"
+            class="absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+          <img src="{{ work.before_image.url }}" alt="{{ work|loc:'title' }} – {% translate 'Before' %}"
+            class="ba-before absolute inset-0 w-full h-full object-cover" loading="lazy" draggable="false">
+          <span class="absolute top-3 left-3 bg-black/60 text-white text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full">{% translate "Before" %}</span>
+          <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full">{% translate "After" %}</span>
+          <div class="ba-handle absolute inset-y-0 w-0.5 bg-white shadow pointer-events-none">
+            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-700">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </span>
+          </div>
+          <input type="range" min="0" max="100" value="50" aria-label="{% translate 'Compare before and after' %}"
+            class="ba-range absolute inset-0 w-full h-full opacity-0 cursor-ew-resize">
+        </div>
+        <figcaption class="p-5">
+          <h3 class="font-semibold text-gray-900">{{ work|loc:"title" }}</h3>
+          {% if work.service %}<p class="text-sm text-emerald-700 mt-1">{{ work.service|loc:"name" }}</p>{% endif %}
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('.ba-slider').forEach(slider => {
+    const range = slider.querySelector('.ba-range');
+    const update = () => slider.style.setProperty('--pos', range.value + '%');
+    range.addEventListener('input', update);
+    update();
+  });
+</script>
+{% endif %}
 
 
 <!-- ================== AREAS WE SERVICE ================== -->
@@ -286,22 +366,19 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {% for service in popular_services %}
-      <a href="{% url 'service_detail' service.slug %}"
-        class="group block bg-white rounded-2xl shadow-md overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+      <div class="group flex flex-col bg-white rounded-2xl shadow-md overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
         data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:100 }}">
-        <div class="overflow-hidden">
+        <a href="{% url 'service_detail' service.slug %}" class="block overflow-hidden">
           {% include "includes/service_thumb.html" with service=service classes="w-full h-48 transition-transform duration-500 group-hover:scale-110" %}
-        </div>
-        <div class="p-6 text-left">
+        </a>
+        <div class="p-6 text-left flex flex-col flex-1">
           <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ service|loc:"name" }}</h3>
-          <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-4">
+          <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-4 flex-1">
             {{ service|loc:"description"|striptags|truncatewords:25 }}
           </p>
-          <span class="text-emerald-600 font-semibold group-hover:text-emerald-700 transition">
-            {% translate "View Details" %} →
-          </span>
+          {% include "includes/service_buttons.html" with service=service %}
         </div>
-      </a>
+      </div>
       {% empty %}
       <p class="text-gray-500 text-center col-span-full">{% translate "No popular services available right now." %}</p>
       {% endfor %}

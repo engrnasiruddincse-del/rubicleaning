@@ -111,6 +111,7 @@ UNFOLD = {
 
 
                     {"title": _("Reviews"), "icon": "reviews", "link": reverse_lazy("admin:serviceapp_review_changelist")},
+                    {"title": _("Our Work (Before / After)"), "icon": "compare", "link": reverse_lazy("admin:serviceapp_workexample_changelist")},
                     # {"title": _("Images"), "icon": "photo_library", "link": reverse_lazy("admin:serviceapp_imagegallery_changelist")},
                     # {"title": _("Team"), "icon": "groups", "link": reverse_lazy("admin:serviceapp_team_changelist")},
                     {"title": _("Company Details"), "icon": "article_person", "link": reverse_lazy("admin:serviceapp_mycompany_changelist")},

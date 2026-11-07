@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}{{ company.name|default:"Rubi Cleaning" }}{% endblock %}</title>
 
+  <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}" />
+
   <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -57,7 +59,7 @@
   </style>
 </head>
 
-<body class="font-sans antialiased bg-background text-foreground relative">
+<body class="font-sans antialiased bg-background text-foreground relative has-mobile-bar">
 
   <!-- Toast Messages -->
   {% if messages %}
@@ -84,15 +86,37 @@
   {% block content %}{% endblock %}
 
 
-  <!-- ✅ Floating WhatsApp Button (uses company phone from admin) -->
+  {% translate 'Hello! I would like to get a quote or ask about your services.' as wa_text %}
+
+  <!-- ✅ Floating WhatsApp Button (desktop; mobile uses the bottom bar below) -->
   {% if company.phone %}
-  <a href="https://wa.me/{{ company.phone|cut:' '|cut:'+'|cut:'-'|cut:'('|cut:')' }}?text={% translate 'Hello! I would like to get a quote or ask about your services.' as wa_text %}{{ wa_text|urlencode }}"
+  <a href="https://wa.me/{{ company.phone|cut:' '|cut:'+'|cut:'-'|cut:'('|cut:')' }}?text={{ wa_text|urlencode }}"
     target="_blank" rel="noopener"
-    class="whatsapp-btn fixed bottom-5 right-5 z-50 flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg rounded-full px-5 py-3">
+    class="whatsapp-btn fixed bottom-5 right-5 z-50 hidden lg:flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold shadow-lg rounded-full px-5 py-3">
     <i class="fab fa-whatsapp text-2xl mr-2"></i>
-    <span class="hidden sm:inline">{% translate "Chat on WhatsApp" %}</span>
+    <span>{% translate "Chat on WhatsApp" %}</span>
   </a>
   {% endif %}
+
+  <!-- ✅ Mobile sticky contact bar -->
+  <nav class="lg:hidden fixed bottom-0 inset-x-0 z-[9980] bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] grid {% if company.phone %}grid-cols-3{% else %}grid-cols-1{% endif %} h-16 pb-[env(safe-area-inset-bottom)]"
+    aria-label="{% translate 'Quick contact' %}">
+    {% if company.phone %}
+    <a href="tel:{{ company.phone|cut:' ' }}" class="flex flex-col items-center justify-center gap-0.5 text-gray-700 active:bg-gray-100">
+      <i class="fa-solid fa-phone text-lg text-blue-600"></i>
+      <span class="text-xs font-semibold">{% translate "Call" %}</span>
+    </a>
+    <a href="https://wa.me/{{ company.phone|cut:' '|cut:'+'|cut:'-'|cut:'('|cut:')' }}?text={{ wa_text|urlencode }}" target="_blank" rel="noopener"
+      class="flex flex-col items-center justify-center gap-0.5 bg-green-500 text-white active:bg-green-600">
+      <i class="fab fa-whatsapp text-xl"></i>
+      <span class="text-xs font-semibold">WhatsApp</span>
+    </a>
+    {% endif %}
+    <a href="{% url 'home' %}#quote" class="flex flex-col items-center justify-center gap-0.5 text-gray-700 active:bg-gray-100">
+      <i class="fa-solid fa-paper-plane text-lg text-emerald-600"></i>
+      <span class="text-xs font-semibold">{% translate "Get a Quote" %}</span>
+    </a>
+  </nav>
 
   <!-- ✅ Smooth Scroll to Quote -->
   <script>
