@@ -1,5 +1,6 @@
 import os
 from django.core.mail import EmailMessage
+from .mailer import send_in_background
 from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -24,7 +25,7 @@ def quote_request_recieved_alter(sender, instance, created, **kwargs):
             from_email=settings.DEFAULT_FROM_EMAIL,
             to=[instance.email],
         )
-        mail.send(fail_silently=False)
+        send_in_background(mail)
 
         # ✅ Notify company dynamically (from MyCompany.email)
         company = MyCompany.objects.first()
@@ -46,7 +47,7 @@ def quote_request_recieved_alter(sender, instance, created, **kwargs):
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 to=[company.email],  # 👈 Dynamic company email
             )
-            admin_mail.send(fail_silently=False)
+            send_in_background(admin_mail)
 
 
 # ===============================================================
@@ -74,7 +75,7 @@ def contact_message_notify(sender, instance, created, **kwargs):
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 to=[company.email],  # 👈 Dynamic company email
             )
-            admin_mail.send(fail_silently=False)
+            send_in_background(admin_mail)
 
     # ✅ clear cache for unread count
     cache.delete("unread_message_count")
@@ -105,7 +106,7 @@ def regenerate_docs_on_item_save(sender, instance, **kwargs):
                 if os.path.exists(file_path):
                     email.attach_file(file_path)
 
-            email.send(fail_silently=False)
+            send_in_background(email)
             quote.mail_sent = True
             quote.save(update_fields=["mail_sent"])
 
@@ -135,7 +136,7 @@ def handle_quote_status(sender, instance, **kwargs):
                 if os.path.exists(file_path):
                     email.attach_file(file_path)
 
-            email.send(fail_silently=False)
+            send_in_background(email)
             instance.mail_sent = True
             instance.save(update_fields=["mail_sent"])
 
@@ -164,7 +165,7 @@ def handle_quote_status(sender, instance, **kwargs):
                 if os.path.exists(file_path):
                     email.attach_file(file_path)
 
-            email.send(fail_silently=False)
+            send_in_background(email)
 
 
 

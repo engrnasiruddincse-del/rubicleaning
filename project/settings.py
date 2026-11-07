@@ -166,12 +166,17 @@ CKEDITOR_CONFIGS = {
 
 
 # Email
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
+# Gmail by default. On DigitalOcean (ports 25/465/587 blocked) use a relay on port 2525,
+# e.g. Brevo: EMAIL_HOST=smtp-relay.brevo.com, EMAIL_PORT=2525
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '587'))
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER or 'webmaster@localhost'
+# Address customers see in "From" (with a relay the login user is not an email address)
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL') or EMAIL_HOST_USER or 'webmaster@localhost'
+# Give up quickly if the mail server is unreachable (instead of hanging the request)
+EMAIL_TIMEOUT = 10
 # Without Gmail credentials, print emails to the console instead of sending
 if EMAIL_HOST_USER and EMAIL_HOST_PASSWORD:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

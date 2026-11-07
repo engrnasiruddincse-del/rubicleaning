@@ -154,8 +154,12 @@ class InvoiceAdmin(ModelAdmin):
                 file_path = invoice.invoice_file.path
                 if os.path.exists(file_path):
                     mail.attach_file(file_path)
-            mail.send(fail_silently=False)
-            
+            try:
+                mail.send(fail_silently=False)
+            except Exception as exc:
+                self.message_user(request, f"Invoice PDF created, but the email could not be sent: {exc}", level=messages.ERROR)
+                return redirect(request.META.get('HTTP_REFERER'))
+
             invoice.is_sent = True
             invoice.save()
             self.message_user(request, "Invoice sent successfully!")
@@ -282,9 +286,11 @@ class QuoteAdmin(ModelAdmin):
                 file_path = quote.quotation_file.path
                 if os.path.exists(file_path):
                     mail.attach_file(file_path)
-            mail.send(fail_silently=False)
-            
-            messages.success(request, "Email resent successfully!")
+            try:
+                mail.send(fail_silently=False)
+                messages.success(request, "Email resent successfully!")
+            except Exception as exc:
+                messages.error(request, f"Quote PDF created, but the email could not be sent: {exc}")
         else:
             messages.error(request, "Unable to resend email. Quote request not found.")
             
