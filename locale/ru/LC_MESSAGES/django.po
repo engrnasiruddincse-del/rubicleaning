@@ -1,0 +1,592 @@
+# Russian translations for Rubi Cleaning.
+# Edit msgstr values, then run: python manage.py build_translations
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "About Rubi Cleaning"
+msgstr "О Rubi Cleaning"
+
+msgid "Professional home, office and snow cleaning in Tallinn, done with care."
+msgstr "Профессиональная уборка домов, офисов и снега в Таллинне — с заботой и вниманием."
+
+msgid "Rubi Cleaning is a professional cleaning company in Tallinn for homes, apartments and offices. Our trained team brings the equipment and products, follows a clear checklist on every visit, and leaves your space fresh, healthy and ready to enjoy."
+msgstr "Rubi Cleaning — профессиональная клининговая компания в Таллинне для домов, квартир и офисов. Наша обученная команда привозит оборудование и средства, работает по чёткому чек-листу при каждом визите и оставляет ваше пространство свежим, здоровым и готовым к жизни."
+
+msgid "What we do"
+msgstr "Чем мы занимаемся"
+
+msgid "We specialise in:"
+msgstr "Мы специализируемся на:"
+
+msgid "Whether you need a weekly clean, a one-off deep clean before guests arrive, or a cleared driveway after a snowfall, we tailor every job to your space and schedule."
+msgstr "Нужна ли вам еженедельная уборка, разовая генеральная уборка перед приездом гостей или расчищенная дорожка после снегопада — мы подстраиваем каждую работу под ваше помещение и график."
+
+msgid "Our Promise"
+msgstr "Наше обещание"
+
+msgid "Our goal is simple: careful work, honest prices and customers who are happy to book us again. If something isn’t right after a clean, tell us and we’ll come back to fix it."
+msgstr "Наша цель проста: аккуратная работа, честные цены и клиенты, которые с радостью заказывают нас снова. Если после уборки что-то не так, сообщите нам — мы вернёмся и всё исправим."
+
+msgid "Why Choose Us"
+msgstr "Почему выбирают нас"
+
+msgid "Trained, vetted cleaners who treat your home with respect."
+msgstr "Обученные и проверенные уборщики, которые бережно относятся к вашему дому."
+
+msgid "Eco-friendly products that are safe for children and pets."
+msgstr "Экологичные средства, безопасные для детей и домашних животных."
+
+msgid "Flexible booking, including evenings and weekends."
+msgstr "Гибкое бронирование, в том числе вечером и в выходные."
+
+msgid "Clear, upfront prices in euros with no hidden extras."
+msgstr "Понятные цены в евро без скрытых доплат."
+
+msgid "Quality Assurance"
+msgstr "Контроль качества"
+
+msgid "Every job is done to a clear checklist and checked before we leave."
+msgstr "Каждая работа выполняется по чёткому чек-листу и проверяется перед уходом."
+
+msgid "Eco-Friendly"
+msgstr "Экологично"
+
+msgid "We use environmentally safe products and sustainable practices in all our services."
+msgstr "Во всех услугах мы используем экологически безопасные средства и бережные методы."
+
+msgid "Reliable Service"
+msgstr "Надёжный сервис"
+
+msgid "Punctual, consistent and dependable service you can count on every time."
+msgstr "Пунктуальный, стабильный и надёжный сервис, на который можно положиться."
+
+msgid "Want to know more?"
+msgstr "Хотите узнать больше?"
+
+msgid "Contact our friendly team today to learn how we can help keep your space spotless."
+msgstr "Свяжитесь с нашей командой и узнайте, как мы поможем поддерживать идеальную чистоту."
+
+msgid "Get in Touch"
+msgstr "Связаться с нами"
+
+msgid "Hello! I would like to get a quote or ask about your services."
+msgstr "Здравствуйте! Хотел(а) бы узнать цену или задать вопрос о ваших услугах."
+
+msgid "Chat on WhatsApp"
+msgstr "Написать в WhatsApp"
+
+msgid "Quick contact"
+msgstr "Быстрая связь"
+
+msgid "Call"
+msgstr "Позвонить"
+
+msgid "Get a Quote"
+msgstr "Узнать цену"
+
+msgid "Join Our Team"
+msgstr "Присоединяйтесь к нашей команде"
+
+msgid "Build a rewarding career with Rubi Cleaning in Tallinn."
+msgstr "Стройте успешную карьеру в Rubi Cleaning в Таллинне."
+
+msgid "Current Openings"
+msgstr "Открытые вакансии"
+
+msgid "Location"
+msgstr "Место работы"
+
+msgid "Salary"
+msgstr "Зарплата"
+
+msgid "Apply Now"
+msgstr "Откликнуться"
+
+msgid "No Openings Available"
+msgstr "Нет открытых вакансий"
+
+msgid "Sorry, no openings available at this time."
+msgstr "К сожалению, сейчас открытых вакансий нет."
+
+msgid "Why Work With Us?"
+msgstr "Почему стоит работать у нас?"
+
+msgid "Fair Pay"
+msgstr "Честная оплата"
+
+msgid "Fair, on-time pay and an official employment contract"
+msgstr "Честная и своевременная оплата и официальный трудовой договор"
+
+msgid "Team Environment"
+msgstr "Командная атмосфера"
+
+msgid "Supportive team culture with opportunities for growth"
+msgstr "Поддерживающая команда и возможности для роста"
+
+msgid "Training Provided"
+msgstr "Обучение"
+
+msgid "Hands-on training and skill development"
+msgstr "Практическое обучение и развитие навыков"
+
+msgid "Apply for Position"
+msgstr "Откликнуться на вакансию"
+
+msgid "Full Name"
+msgstr "Полное имя"
+
+msgid "Email Address"
+msgstr "Электронная почта"
+
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+msgid "CV (PDF, DOC, DOCX)"
+msgstr "Резюме (PDF, DOC, DOCX)"
+
+msgid "Cover Letter / Message"
+msgstr "Сопроводительное письмо / сообщение"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Submit"
+msgstr "Отправить"
+
+msgid "Application Submitted!"
+msgstr "Заявка отправлена!"
+
+msgid "Thank you for applying. We’ll get back to you soon."
+msgstr "Спасибо за отклик. Мы скоро с вами свяжемся."
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Error submitting application. Please try again."
+msgstr "Ошибка при отправке заявки. Пожалуйста, попробуйте ещё раз."
+
+msgid "Contact Us"
+msgstr "Контакты"
+
+msgid "Call, WhatsApp or send us a message — we’ll get back to you quickly."
+msgstr "Позвоните, напишите в WhatsApp или отправьте сообщение — мы быстро ответим."
+
+msgid "Have a question or need a quote? Our team is here to help."
+msgstr "Есть вопрос или нужен расчёт стоимости? Наша команда готова помочь."
+
+msgid "Send us a Message"
+msgstr "Отправьте нам сообщение"
+
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+msgid "Office Address"
+msgstr "Адрес офиса"
+
+msgid "Phone & WhatsApp"
+msgstr "Телефон и WhatsApp"
+
+msgid "Email"
+msgstr "Эл. почта"
+
+msgid "We’re Available"
+msgstr "Мы на связи"
+
+msgid "7 days a week, including evenings and weekends by arrangement."
+msgstr "7 дней в неделю, по договорённости — вечером и в выходные."
+
+msgid "Map"
+msgstr "Карта"
+
+msgid "Follow Us"
+msgstr "Мы в соцсетях"
+
+msgid "Professional home, office and snow cleaning in Tallinn and Harju County."
+msgstr "Профессиональная уборка домов, офисов и снега в Таллинне и Харьюмаа."
+
+msgid "Quick Links"
+msgstr "Быстрые ссылки"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Services"
+msgstr "Услуги"
+
+msgid "About"
+msgstr "О нас"
+
+msgid "Contact"
+msgstr "Контакты"
+
+msgid "Careers"
+msgstr "Карьера"
+
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+msgid "Terms & Conditions"
+msgstr "Условия"
+
+msgid "No active services"
+msgstr "Нет активных услуг"
+
+msgid "Contact Info"
+msgstr "Контактная информация"
+
+msgid "All rights reserved."
+msgstr "Все права защищены."
+
+msgid "View all services"
+msgstr "Все услуги"
+
+msgid "Book a Cleaning"
+msgstr "Заказать уборку"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "View Details"
+msgstr "Подробнее"
+
+msgid "Book"
+msgstr "Заказать"
+
+msgid "Professional cleaning in Tallinn"
+msgstr "Профессиональная уборка в Таллинне"
+
+msgid "Spotless. Stress-Free."
+msgstr "Чисто. Без забот."
+
+msgid "Guaranteed."
+msgstr "Гарантированно."
+
+msgid "Home, office and snow cleaning from €35. Book by phone, WhatsApp or the quote form below."
+msgstr "Уборка домов, офисов и снега от 35 €. Заказ по телефону, в WhatsApp или через форму ниже."
+
+msgid "Insured"
+msgstr "Застрахованы"
+
+msgid "Flexible scheduling, 7 days a week"
+msgstr "Гибкий график, 7 дней в неделю"
+
+msgid "Trained, vetted cleaners"
+msgstr "Обученные и проверенные уборщики"
+
+msgid "Eco-friendly products"
+msgstr "Экологичные средства"
+
+msgid "Satisfaction guaranteed"
+msgstr "Гарантия качества"
+
+msgid "Get a Free Quote"
+msgstr "Бесплатный расчёт"
+
+msgid "View Our Services"
+msgstr "Наши услуги"
+
+msgid "Get Your Free Quote"
+msgstr "Получите бесплатный расчёт"
+
+msgid "Fill out the form below and our team will get back to you as soon as possible."
+msgstr "Заполните форму ниже, и наша команда свяжется с вами как можно скорее."
+
+msgid "Enter your full name"
+msgstr "Введите ваше полное имя"
+
+msgid "Enter your email"
+msgstr "Введите ваш e-mail"
+
+msgid "Service Address"
+msgstr "Адрес уборки"
+
+msgid "Street and house number"
+msgstr "Улица и номер дома"
+
+msgid "City"
+msgstr "Город"
+
+msgid "Postal Code"
+msgstr "Почтовый индекс"
+
+msgid "Select Services"
+msgstr "Выберите услуги"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Any specific requirements or questions?"
+msgstr "Есть особые пожелания или вопросы?"
+
+msgid "Our Services"
+msgstr "Наши услуги"
+
+msgid "From regular upkeep to deep cleans and snow removal, everything you need to keep your space shining."
+msgstr "От регулярной уборки до генеральной и уборки снега — всё, чтобы ваше пространство сияло."
+
+msgid "No services available right now."
+msgstr "Сейчас услуги недоступны."
+
+msgid "How It Works"
+msgstr "Как это работает"
+
+msgid "Booking a cleaning takes just a couple of minutes."
+msgstr "Заказ уборки занимает всего пару минут."
+
+msgid "Message or call us"
+msgstr "Напишите или позвоните"
+
+msgid "Tell us what needs cleaning via WhatsApp, phone or the quote form."
+msgstr "Расскажите, что нужно убрать, — в WhatsApp, по телефону или через форму."
+
+msgid "Agree on price and time"
+msgstr "Согласуем цену и время"
+
+msgid "We confirm the final price before we start and pick a time that suits you."
+msgstr "Мы подтверждаем окончательную цену до начала работы и выбираем удобное для вас время."
+
+msgid "We clean, you relax"
+msgstr "Мы убираем — вы отдыхаете"
+
+msgid "Our team arrives with all the products and equipment and leaves your space spotless."
+msgstr "Наша команда приезжает со всеми средствами и оборудованием и оставляет идеальную чистоту."
+
+msgid "Prices"
+msgstr "Цены"
+
+msgid "Starting prices in euros. The final price depends on the size and condition of the space."
+msgstr "Начальные цены в евро. Окончательная цена зависит от площади и состояния помещения."
+
+msgid "from"
+msgstr "от"
+
+msgid "Contact us for a price."
+msgstr "Свяжитесь с нами, чтобы узнать цену."
+
+msgid "Our Work"
+msgstr "Наши работы"
+
+msgid "Real results from our cleanings. Drag the slider to compare before and after."
+msgstr "Реальные результаты наших уборок. Двигайте ползунок, чтобы сравнить до и после."
+
+msgid "After"
+msgstr "После"
+
+msgid "Before"
+msgstr "До"
+
+msgid "Compare before and after"
+msgstr "Сравнить до и после"
+
+msgid "Serving Tallinn & Harju County"
+msgstr "Работаем в Таллинне и Харьюмаа"
+
+msgid "We clean across Tallinn and nearby Harju County."
+msgstr "Убираем по всему Таллинну и в ближайших районах Харьюмаа."
+
+msgid "Our Achievements"
+msgstr "Наши достижения"
+
+msgid "Service Guarantee"
+msgstr "Гарантия сервиса"
+
+msgid "Experts"
+msgstr "Специалистов"
+
+msgid "Properties Cleaned"
+msgstr "Убранных объектов"
+
+msgid "Most Popular Services"
+msgstr "Популярные услуги"
+
+msgid "Our customers’ favourite cleaning services — tried, trusted and loved."
+msgstr "Любимые услуги наших клиентов — проверенные и надёжные."
+
+msgid "No popular services available right now."
+msgstr "Сейчас популярных услуг нет."
+
+msgid "What Our Clients Say"
+msgstr "Отзывы клиентов"
+
+msgid "Real feedback from satisfied customers who trust our services."
+msgstr "Настоящие отзывы довольных клиентов, которые нам доверяют."
+
+msgid "Frequently Asked Questions"
+msgstr "Частые вопросы"
+
+msgid "Get answers to common questions about our cleaning services."
+msgstr "Ответы на частые вопросы о наших услугах."
+
+msgid "No FAQs available right now."
+msgstr "Пока нет вопросов."
+
+msgid "We value your privacy and protect your personal data in line with the GDPR."
+msgstr "Мы ценим вашу конфиденциальность и защищаем персональные данные в соответствии с GDPR."
+
+msgid "Information We Collect"
+msgstr "Какие данные мы собираем"
+
+msgid "We collect your contact details (name, phone number, email and address) only to prepare quotes, schedule cleanings and communicate with you."
+msgstr "Мы собираем ваши контактные данные (имя, телефон, e-mail и адрес) только для расчёта стоимости, планирования уборки и связи с вами."
+
+msgid "How We Use Information"
+msgstr "Как мы используем данные"
+
+msgid "Your personal data is used only for booking management, quotes, invoices and updates about our services. We do not sell, rent or share your data with third parties for marketing."
+msgstr "Ваши персональные данные используются только для управления заказами, расчётов, счетов и уведомлений об услугах. Мы не продаём, не сдаём в аренду и не передаём ваши данные третьим лицам в маркетинговых целях."
+
+msgid "Your Rights"
+msgstr "Ваши права"
+
+msgid "Under the EU General Data Protection Regulation (GDPR) you can ask to see, correct or delete your personal data at any time. You may also lodge a complaint with the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon)."
+msgstr "Согласно Общему регламенту ЕС по защите данных (GDPR) вы в любое время можете запросить доступ к своим данным, их исправление или удаление. Вы также можете подать жалобу в Инспекцию по защите данных Эстонии (Andmekaitse Inspektsioon)."
+
+msgid "Data Security"
+msgstr "Безопасность данных"
+
+msgid "Your data is stored securely and protected against unauthorised access, with access limited to staff who need it."
+msgstr "Ваши данные хранятся надёжно и защищены от несанкционированного доступа; доступ есть только у сотрудников, которым он необходим."
+
+msgid "Cookies"
+msgstr "Файлы cookie"
+
+msgid "Our website uses only essential cookies, for example to remember your language choice and keep forms secure."
+msgstr "Наш сайт использует только необходимые cookie — например, чтобы запомнить выбранный язык и защитить формы."
+
+msgid "Questions about your data? Reach us via our"
+msgstr "Вопросы о ваших данных? Свяжитесь с нами:"
+
+msgid "contact page"
+msgstr "страница контактов"
+
+msgid "Spotless, reliable and eco-friendly — for homes and businesses in Tallinn."
+msgstr "Чисто, надёжно и экологично — для домов и компаний в Таллинне."
+
+msgid "Fully insured, trained and vetted cleaners"
+msgstr "Застрахованные, обученные и проверенные уборщики"
+
+msgid "Eco-friendly and safe cleaning products"
+msgstr "Экологичные и безопасные чистящие средства"
+
+msgid "Satisfaction guaranteed on every job"
+msgstr "Гарантия качества на каждую работу"
+
+msgid "Book on WhatsApp"
+msgstr "Заказать в WhatsApp"
+
+msgid "Back to Services"
+msgstr "Назад к услугам"
+
+msgid "Why Choose Rubi Cleaning?"
+msgstr "Почему Rubi Cleaning?"
+
+msgid "We combine reliability, experience and eco-conscious care to deliver spotless results every time."
+msgstr "Мы сочетаем надёжность, опыт и заботу об экологии, чтобы результат всегда был безупречным."
+
+msgid "Contact Us Today"
+msgstr "Свяжитесь с нами"
+
+msgid "Explore our professional cleaning services — designed to make your space spotless and stress-free."
+msgstr "Познакомьтесь с нашими профессиональными услугами — для идеальной чистоты без забот."
+
+msgid "What We Offer"
+msgstr "Что мы предлагаем"
+
+msgid "From one-time deep cleans to ongoing maintenance, our expert team has you covered."
+msgstr "От разовой генеральной уборки до постоянного обслуживания — наша команда поможет."
+
+msgid "Looking for a Custom Service?"
+msgstr "Нужна индивидуальная услуга?"
+
+msgid "We offer tailored cleaning for your home or business. Get in touch today and let’s make your space shine."
+msgstr "Мы предлагаем уборку под ваш дом или бизнес. Свяжитесь с нами — и ваше пространство засияет."
+
+msgid "Please read our terms before booking our cleaning services."
+msgstr "Пожалуйста, ознакомьтесь с условиями перед заказом уборки."
+
+msgid "Agreement"
+msgstr "Соглашение"
+
+msgid "By booking Rubi Cleaning services, you agree to these terms. All bookings are subject to availability and confirmation."
+msgstr "Заказывая услуги Rubi Cleaning, вы соглашаетесь с этими условиями. Все заказы зависят от наличия свободного времени и требуют подтверждения."
+
+msgid "Prices and Payment"
+msgstr "Цены и оплата"
+
+msgid "Prices are in euros (EUR). Prices on the website are starting prices; the final price is confirmed before the work begins. Invoices are paid by bank transfer within the stated due date."
+msgstr "Цены указаны в евро (EUR). Цены на сайте — начальные; окончательная цена согласовывается до начала работы. Счета оплачиваются банковским переводом в указанный срок."
+
+msgid "Cancellations"
+msgstr "Отмена"
+
+msgid "You may cancel free of charge up to 24 hours before your appointment. Late cancellations may incur a fee to cover staff and scheduling costs."
+msgstr "Бесплатная отмена возможна не позднее чем за 24 часа до визита. При поздней отмене может взиматься плата за расходы на персонал и планирование."
+
+msgid "Quality Guarantee"
+msgstr "Гарантия качества"
+
+msgid "If you are not satisfied with any part of the cleaning, let us know within 24 hours and we will return to fix it free of charge."
+msgstr "Если вас не устроила какая-либо часть уборки, сообщите нам в течение 24 часов — мы бесплатно вернёмся и всё исправим."
+
+msgid "Liability"
+msgstr "Ответственность"
+
+msgid "We are insured for the work we carry out. Rubi Cleaning is not liable for pre-existing damage or normal wear and tear."
+msgstr "Наша работа застрахована. Rubi Cleaning не несёт ответственности за ранее существовавшие повреждения и естественный износ."
+
+msgid "For further information, reach us via our"
+msgstr "Для получения дополнительной информации свяжитесь с нами:"
+
+msgid "Your quote request has been submitted successfully!"
+msgstr "Ваш запрос успешно отправлен!"
+
+msgid "Please check the form and try again."
+msgstr "Пожалуйста, проверьте форму и попробуйте снова."
+
+msgid "Your message has been sent successfully!"
+msgstr "Ваше сообщение успешно отправлено!"
+
+msgid "Your application has been submitted successfully!"
+msgstr "Ваша заявка успешно отправлена!"
+
+msgid "This page was open too long. Please try again."
+msgstr "Страница была открыта слишком долго. Пожалуйста, попробуйте ещё раз."
+
+msgid "First name"
+msgstr "Имя"
+
+msgid "Last name"
+msgstr "Фамилия"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Enter your first name"
+msgstr "Введите имя"
+
+msgid "Enter your last name"
+msgstr "Введите фамилию"
+
+msgid "Enter subject"
+msgstr "Введите тему"
+
+msgid "Enter your message"
+msgstr "Введите сообщение"
+
+msgid "Hello! I would like to book: %(service)s (from %(price)s)."
+msgstr "Здравствуйте! Хочу заказать: %(service)s (от %(price)s)."
+
+msgid "Hello! I would like to book: %(service)s."
+msgstr "Здравствуйте! Хочу заказать: %(service)s."
+
+msgid "Address:"
+msgstr "Адрес:"
+
+msgid "Preferred date and time:"
+msgstr "Желаемая дата и время:"

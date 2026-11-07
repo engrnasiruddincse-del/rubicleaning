@@ -13,9 +13,10 @@ from ckeditor.fields import RichTextField
 
 
 def localized(obj, field):
-    """Return obj.<field>_et when the active language is Estonian and it is filled in."""
-    if (get_language() or '').startswith('et'):
-        value = getattr(obj, f'{field}_et', '')
+    """Return obj.<field>_<lang> (e.g. name_et, name_ru) for the active language if filled in, else the English field."""
+    lang = (get_language() or 'en')[:2]
+    if lang != 'en':
+        value = getattr(obj, f'{field}_{lang}', '')
         if value:
             return value
     return getattr(obj, field)
@@ -81,9 +82,11 @@ class HeroSection(models.Model):
 class Service(models.Model):
     name = models.CharField(max_length=255)
     name_et = models.CharField("Name (Estonian)", max_length=255, blank=True)
+    name_ru = models.CharField("Name (Russian)", max_length=255, blank=True)
     slug = models.SlugField(max_length=255, unique=True)
     description = models.TextField(blank=True)
     description_et = models.TextField("Description (Estonian)", blank=True)
+    description_ru = models.TextField("Description (Russian)", blank=True)
     image = models.ImageField(upload_to='serviceapp/images', blank=True)
     is_active = models.BooleanField(default=True)
     is_popular = models.BooleanField(default=False)
@@ -108,8 +111,10 @@ class FAQ(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE, blank=True, null=True)
     question = models.CharField(max_length=255)
     question_et = models.CharField("Question (Estonian)", max_length=255, blank=True)
+    question_ru = models.CharField("Question (Russian)", max_length=255, blank=True)
     answer = models.TextField(blank=True)
     answer_et = models.TextField("Answer (Estonian)", blank=True)
+    answer_ru = models.TextField("Answer (Russian)", blank=True)
     is_general = models.BooleanField(default=False)
 
     def __str__(self):
@@ -332,6 +337,7 @@ class WorkExample(models.Model):
     """Before/after photos of a real job, shown in the homepage 'Our Work' section."""
     title = models.CharField(max_length=255, help_text="e.g. 'Oven tray'")
     title_et = models.CharField("Title (Estonian)", max_length=255, blank=True)
+    title_ru = models.CharField("Title (Russian)", max_length=255, blank=True)
     service = models.ForeignKey(Service, on_delete=models.SET_NULL, blank=True, null=True)
     before_image = models.ImageField(upload_to='serviceapp/work')
     after_image = models.ImageField(upload_to='serviceapp/work')
@@ -496,6 +502,7 @@ class ServiceLocation(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=255, blank=True, null=True)
     description_et = models.CharField("Description (Estonian)", max_length=255, blank=True)
+    description_ru = models.CharField("Description (Russian)", max_length=255, blank=True)
     is_active = models.BooleanField(default=True)
 
     class Meta:
@@ -511,11 +518,14 @@ class ServiceLocation(models.Model):
 class Pricing(models.Model):
     title = models.CharField(max_length=255)
     title_et = models.CharField("Title (Estonian)", max_length=255, blank=True)
+    title_ru = models.CharField("Title (Russian)", max_length=255, blank=True)
     price = models.CharField(max_length=100, help_text="Example: '€35' or '€5 / window'. Shown after 'from'.")
     features = models.TextField(help_text="List each feature on a new line")
     features_et = models.TextField("Features (Estonian)", blank=True, help_text="One feature per line")
+    features_ru = models.TextField("Features (Russian)", blank=True, help_text="One feature per line")
     button_text = models.CharField(max_length=50, default="Get Quote")
     button_text_et = models.CharField("Button text (Estonian)", max_length=50, blank=True)
+    button_text_ru = models.CharField("Button text (Russian)", max_length=50, blank=True)
     button_link = models.URLField(blank=True, null=True)
     is_active = models.BooleanField(default=True)
     order = models.PositiveIntegerField(default=0)

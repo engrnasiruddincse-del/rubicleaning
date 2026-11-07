@@ -121,6 +121,7 @@ LANGUAGE_CODE = 'et'
 LANGUAGES = [
     ('et', 'Eesti'),
     ('en', 'English'),
+    ('ru', 'Русский'),
 ]
 
 LOCALE_PATHS = [BASE_DIR / 'locale']

@@ -48,7 +48,7 @@ class MyCompanyAdmin(ModelAdmin):
 
 @admin.register(Service)
 class ServiceAdmin(ModelAdmin):
-    list_display = ('name', 'name_et', 'is_active')
+    list_display = ('name', 'name_et', 'name_ru', 'is_active')
     search_fields = ('name',)
     list_filter = ('is_active',)
     prepopulated_fields = {'slug': ('name',)}
@@ -319,7 +319,7 @@ class ImageGalleryAdmin(ModelAdmin):
 
 @admin.register(WorkExample)
 class WorkExampleAdmin(ModelAdmin):
-    list_display = ('title', 'title_et', 'service', 'is_active', 'order')
+    list_display = ('title', 'title_et', 'title_ru', 'service', 'is_active', 'order')
     list_editable = ('is_active', 'order')
     list_filter = ('is_active', 'service')
     search_fields = ('title', 'title_et')
