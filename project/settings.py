@@ -191,3 +191,6 @@ if os.environ.get('HTTPS', 'False').lower() in ('true', '1', 'yes'):
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+
+# Stale CSRF tokens: redirect back with a message instead of a bare 403 page
+CSRF_FAILURE_VIEW = 'apps.serviceapp.views.csrf_failure'

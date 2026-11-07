@@ -6,6 +6,7 @@ import json
 from datetime import datetime
 from django.http import JsonResponse
 from django.utils.translation import gettext as _
+from django.utils.http import url_has_allowed_host_and_scheme
 
 
 from .models import (
@@ -272,3 +273,15 @@ def unread_count_api(request):
     except Exception:
         count = 0
     return JsonResponse({"unread": count})
+
+
+# ================================================
+# 🔒 CSRF failure (stale form, e.g. after logging in in another tab)
+# ================================================
+def csrf_failure(request, reason=""):
+    """Send the visitor back to the form with a friendly message instead of a bare 403 page."""
+    messages.error(request, _("This page was open too long. Please try again."))
+    back = request.META.get("HTTP_REFERER") or reverse("home")
+    if not url_has_allowed_host_and_scheme(back, allowed_hosts={request.get_host()}):
+        back = reverse("home")
+    return redirect(back)

@@ -552,6 +552,9 @@ msgstr "Teie sõnum on edukalt saadetud!"
 msgid "Your application has been submitted successfully!"
 msgstr "Teie avaldus on edukalt saadetud!"
 
+msgid "This page was open too long. Please try again."
+msgstr "See leht oli liiga kaua avatud. Palun proovige uuesti."
+
 msgid "First name"
 msgstr "Eesnimi"
 
